@@ -1,0 +1,13 @@
+
+Câu 2:
+seasons = ("winter", "spring", "summer", "autumn")
+
+try:
+    month = int(input("Nhập số tháng (1-12): "))
+    if 1 <= month <= 12:
+        index = (month % 12) // 3
+        print(f"Tháng {month} thuộc mùa: {seasons[index]}")
+    else:
+        print("Tháng không hợp lệ.")
+except ValueError:
+    print("Vui lòng nhập một số nguyên.")

@@ -1,0 +1,19 @@
+Câu 1:
+
+numbers = []
+
+while True:
+    user_input = input("Nhập một số (để trống để kết thúc): ")
+    if user_input == "":
+        break
+    try:
+        num = float(user_input)
+        numbers.append(num)
+    except ValueError:
+        print("Vui lòng nhập số hợp lệ.")
+
+numbers.sort(reverse=True)
+
+top_five = numbers[:5]
+
+print("Năm số lớn nhất theo thứ tự giảm dần là:", top_five)

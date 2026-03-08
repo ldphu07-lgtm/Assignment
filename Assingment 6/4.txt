@@ -1,0 +1,14 @@
+câu 4:
+def count_word_frequency(text):
+    words = text.lower().split()
+    frequency = {}
+    
+    for word in words:
+        word = word.strip(".,!?;:")
+        frequency[word] = frequency.get(word, 0) + 1
+        
+    return frequency
+
+sample_text = "Python is great and coding in Python is fun"
+result = count_word_frequency(sample_text)
+print("Tần suất xuất hiện của các từ:", result)

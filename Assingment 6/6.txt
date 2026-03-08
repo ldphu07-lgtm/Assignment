@@ -1,0 +1,28 @@
+câu 6:
+import random
+
+def estimate_pi():
+    try:
+        N = int(input("Bạn muốn tạo bao nhiêu điểm ngẫu nhiên? "))
+        n = 0 
+
+        for _ in range(N):
+    
+            x = random.uniform(-1, 1)
+            y = random.uniform(-1, 1)
+
+      
+            if x**2 + y**2 < 1:
+                n += 1
+
+
+        pi_approx = 4 * n / N
+        print(f"Giá trị xấp xỉ của pi với {N} điểm là: {pi_approx}")
+        
+    except ValueError:
+        print("Vui lòng nhập một số nguyên hợp lệ.")
+    except ZeroDivisionError:
+        print("Số lượng điểm phải lớn hơn 0.")
+
+estimate_pi()
+

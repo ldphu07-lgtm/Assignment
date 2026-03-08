@@ -1,0 +1,18 @@
+
+Câu 3:
+names_set = set()
+
+while True:
+    name = input("Nhập tên (để trống để kết thúc): ").strip()
+    if name == "":
+        break
+    
+    if name in names_set:
+        print("Existing name")
+    else:
+        print("New name")
+        names_set.add(name)
+
+print("\nDanh sách các tên đã nhập:")
+for n in names_set:
+    print(n)
