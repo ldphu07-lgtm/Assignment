@@ -1,4 +1,5 @@
 from flask import Flask, jsonify
+import json
 
 app = Flask(__name__)
 
@@ -8,13 +9,13 @@ def is_prime(n):
         if n % i == 0: return False
     return True
 
-@app.route('/prime_number/<int:number>', methods=['GET'])
+@app.route('/prime_number/<int:number>')
 def check_prime(number):
     result = {
         "Number": number,
         "isPrime": is_prime(number)
     }
-    return jsonify(result)
+    return json.dumps(result)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host =  '127.0.0.1', port = 6000)
